@@ -25,7 +25,7 @@ export default function MusicPlayer() {
 
   useEffect(() => {
     // Check if audio file exists
-    const audio = new Audio('/music/song.mp3')
+  const audio = new Audio(`${import.meta.env.BASE_URL}music/song.mp3`))
     audio.addEventListener('canplaythrough', () => {
       setHasAudio(true)
       audioRef.current = audio
